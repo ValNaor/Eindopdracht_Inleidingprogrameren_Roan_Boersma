@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop the Joker</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Stop the Joker</h1>
+
+    <div id="turnDisplay">Press any attack to start</div>
+    <div id="timerDisplay">Time Left: 20</div>
+
+    <div id="gameOverScreen" class="fullscreen-overlay" style="display: none;">
+        <div class="game-over-content">
+            <h1 id="gameResult"></h1>
+            <button id="restartButton">Restart Game</button>
+        </div>
+    </div>
+
+    <div id="attackInfo"></div>
+
+
+    <div>
+        <progress value="200" min="0" max="200" id="batmanhp"></progress>
+        <progress value="200" min="0" max="200" id="jokerhp"></progress>
+    </div>
+
+    <div id="batmanContainer">
+        <img id="batman" src="image/fighter1batman.jpg" alt="batman"> <!--https://www.pngegg.com/en/search?q=batman, foto van batman-->
+        
+        <div class="Aanvalknoppen">
+            <button id="batmanAttack1">Batarang</button>
+                <div id="batarangcrit">
+                    <img src="image/batarangcrit.jpg" alt="batman gooit batarang">
+                </div>
+                
+            <button id="batmanAttack2">Vengeance</button>
+                <div id="vengeancecrit">
+                    <img src="image/vengeancecrit.jpg" alt="batman slaat joker"> <!--https://thebatmanuniverse.net/batman-389/, foto van batman die joker vasthoud-->
+                </div>
+
+            <button id="batmanAttack3">Millionaire</button>
+            <div id="millionaricrit">
+                <img src="image/millionairecrit.jpg" alt="batman slaat joker"> <!--https://thebatmanuniverse.net/batman-389/, foto van batman die joker vasthoud-->
+            </div>
+        </div>
+    </div>
+
+    <div id="jokerContainer">
+        <img id="joker" src="image/fighter2joker.jpg" alt="joker"> <!--https://nl.pinterest.com/pin/584482857867554094/, foto van joker-->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
