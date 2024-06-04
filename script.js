@@ -58,9 +58,9 @@ function critVeangence() {
 
 function attackOnJoker2(value) {
     if (!isBatmanTurn) return;
-    console.log("Vengeance attack triggered");
     const roll = Math.floor(Math.random()*100) + 1; 
-
+    console.log("Roll value:", roll);
+    
     if (roll >= 90 && jokerhp.value > 0){
         jokerhp.value = jokerhp.value - 40;
         console.log("Critical hit")
@@ -73,7 +73,7 @@ function attackOnJoker2(value) {
 
     else { 
         if (roll < 50 && jokerhp.value > 0) {
-            jokerhp.value += 15;
+            jokerhp.value += 5;
         }
     }
 
@@ -94,7 +94,8 @@ function critMillionaire() {
 function attackOnJoker3(value) {
     if (!isBatmanTurn) return;
     const roll = Math.floor(Math.random() * 100) + 1; 
-   
+    console.log("Roll value:", roll);
+
     if  (roll >= 90 && jokerhp.value > 0) {
         jokerhp.value -= 80;
         critMillionaire()
@@ -107,7 +108,7 @@ function attackOnJoker3(value) {
     
     else { 
         if (roll < 80 && jokerhp.value > 0) {
-            jokerhp.value += 20;
+            jokerhp.value += 10;
         }
     }
 
@@ -213,7 +214,7 @@ function endTurn() {
         isBatmanTurn = false;
         updateTurnDisplay();
         setTimeout(() => {
-            const attackDelay = Math.floor(Math.random() * 10000) + 1000; 
+            const attackDelay = Math.floor(Math.random() * 5000) + 1000; 
             setTimeout(randomJokerAttack, attackDelay); 
         }, 1000); 
     } else {
